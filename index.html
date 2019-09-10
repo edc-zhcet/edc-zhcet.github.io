@@ -19,22 +19,36 @@ permalink: /
 <section id="intro">
   <div class="container">
     <div class="row">
-      <div class="col-md-7 col-sm-12">
-        <div class="block">
-          <div class="section-title">
-            <h2>About Us</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+        <div class="col-md-7 col-sm-12">
+          <div class="block">
+            <div class="section-title">
+              <h2>About Us</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id </p>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id </p>
-        </div>
-      </div><!-- .col-md-7 close -->
+        </div><!-- .col-md-7 close -->
         <div class="col-md-5 col-sm-12">
-        <div class="block">
-          <img src="img/wrapper-img.png" alt="Img">
+            <section id="testimonial">
+                {% if site.data.testimonials.size > 0 %}
+                <div class="testimonial-carousel">
+                    <div id="testimonial-slider" class="owl-carousel">
+                        {% for tm in site.data.testimonials %}
+                        <div>
+                            <img src="img/cotation.png" alt="IMG">
+                            <p>{{ tm.testimonial }}</p>
+                            <div class="user">
+                                <img src="{{ tm.image }}" alt="Pepole">
+                                <p><span>{{ tm.name }}</span> {{ tm.title }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+            </section>
         </div>
       </div><!-- .col-md-5 close -->
     </div>
-  </div>
 </section>
 
 <!-- Service Start -->
@@ -123,48 +137,10 @@ permalink: /
 <!-- Content Start -->
 <section id="testimonial">
   <div class="container">
-    <div class="row">
+      <div class="row">
       <div class="section-title text-center">
         <h2>Fun Facts About Us</h2>
         <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6">
-        {% if site.data.funfacts.size > 0 %}
-        <div class="block">
-          {% for ff in site.data.funfacts %}
-          <ul class="counter-box clearfix">
-            <li>
-              <div class="block">
-                <i class="{{ ff.icon }}"></i>
-                <h4 class="counter">{{ ff.counter }}</h4>
-                <span>{{ ff.text }}</span>
-              </div>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endif %}
-      </div>
-      <div class="col-md-6">
-        {% if site.data.testimonials.size > 0 %}
-        <div class="testimonial-carousel">
-          <div id="testimonial-slider" class="owl-carousel">
-            {% for tm in site.data.testimonials %}
-            <div>
-                <img src="img/cotation.png" alt="IMG">
-                <p>{{ tm.testimonial }}</p>
-                <div class="user">
-                  <img src="{{ tm.image }}" alt="Pepole">
-                  <p><span>{{ tm.name }}</span> {{ tm.title }}</p>
-                </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-        {% endif %}
-      </div>
-    </div>
-  </div>
 </section>
