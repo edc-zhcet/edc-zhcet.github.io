@@ -134,9 +134,6 @@ font header .navbar-default .navbar-nav li a:hover {
 /*--
 	wrapper Start
 --*/
-#intro {
-  padding: 100px 0;
-}
 #intro .block h2 {
   padding-top: 35px;
   line-height: 27px;
@@ -161,7 +158,6 @@ font header .navbar-default .navbar-nav li a:hover {
 --*/
 #service {
   text-align: center;
-  padding: 90px 0;
 }
 #service .service-item {
   padding-bottom: 30px;
