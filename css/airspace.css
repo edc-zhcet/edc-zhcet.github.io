@@ -135,7 +135,7 @@ font header .navbar-default .navbar-nav li a:hover {
 	wrapper Start
 --*/
 #intro .block h2 {
-  padding-top: 35px;
+  padding-top: 80px;
   line-height: 27px;
   margin: 0;
 }
@@ -263,7 +263,7 @@ font header .navbar-default .navbar-nav li a:hover {
 	content Start
 --*/
 #testimonial {
-  padding: 100px 0;
+  padding: 40px 0;
 }
 #testimonial .block h2 {
   line-height: 27px;
